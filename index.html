@@ -22,6 +22,11 @@
         rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
+        * {
+            color: white;
+        }
+
+
         .imgpagi {
             border-radius: 50% !important;
             height: 10px !important;
@@ -81,85 +86,103 @@
             text-align: left;
 
         }
+
+        .d-container {
+            justify-content: space-between;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            padding-top: 10px;
+
+            padding-right: 10px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background-color: BLACK;
+            color: #ffffff;
+            z-index: 1000;
+
+        }
+
+        nav>ul {
+            float: left;
+            list-style-type: none;
+
+        }
+
+        nav>ul>li,
+        .social>ul>li {
+            display: inline;
+
+        }
+
+        nav>ul>li>a,
+        .social>ul>li>a,
+        .brand {
+            text-decoration: none;
+            all: unset;
+
+        }
+
+        @media (max-width: 768px) {
+            nav>ul>li {
+                display: block;
+
+            }
+
+            .d-container {
+                justify-content: space-between;
+                flex-direction: column;
+                align-items: center;
+                width: 100vw;
+
+                padding-right: 10px;
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: 1000;
+            }
+
+
+        }
+
+        .logo-container {
+            padding-left: 25px;
+        }
     </style>
 </head>
 
 <body style="background-color: black; width:100%; margin: 0px; padding: 0px;">
     <header>
-        <!-- <nav class="navbar navbar-expand-md navbar-dark">
-            <div class="container-fluid ">
-                <a class="navbar-brand fw-bold ms-2" href="#">Pizza Resturant</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="ms-3 me-3 nav-link active" aria-current="page" href="#">ABOUT US</a>
-                        </li>
-                        <li class="ms-3 me-3 nav-item">
-                            <a class="nav-link" href="#">MENU</a>
-                        </li>
-                        <li class="ms-3 me-3 nav-item">
-                            <a class="nav-link" href="#">BLOGS</a>
-                        </li>
-                        <li class="ms-3 me-3 nav-item">
-                            <a class="nav-link" href="#">TESTIMONY</a>
-                        </li>
-                        <li class="ms-3 me-3 nav-item">
-                            <a class="nav-link" href="#">FIND US</a>
-                        </li>
-                        <li class="ms-3 me-3 nav-item">
-                            <a class="nav-link" href="#">OUR TEAM</a>
-                        </li>
 
+        <div class="d-container">
+            <div class="logo-container">
+                <h4>
 
-                    </ul>
-                    <ul class="navbar-nav sm-icons">
-                        <li class="me-2 ms-2 nav-item"><a class="nav-link" href="#"><i class="fab fa-instagram"></i></a>
-                        </li>
-                        <li class="me-2 ms-2 nav-item"><a class="nav-link" href="#"><i
-                                    class="me-2 ms-2 fab fa-facebook-f"></i></a>
-                        </li>
-                        <li class="me-2 ms-2 nav-item"><a class="nav-link" href="#"><i class="fab fa-whatsapp"></i></a>
-                        </li>
-                    </ul>
-
-
-
-
-
-                </div>
-            </div>
-        </nav> -->
-        <!-- custom code nav -->
-
-        <div class="container">
-            <div class="logo">
-                <a class="navbar-brand fw-bold ms-2" href="#">Pizza Resturant</a>
+                    <a class="brand fw-bold" href="#">Pizza Resturant</a>
+                </h4>
             </div>
             <div class="nav">
                 <nav>
-                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="ms-3 me-3 nav-link active" aria-current="page" href="#">ABOUT US</a>
+                    <ul class=" ">
+                        <li class="">
+                            <a class="ms-3 me-3 active" aria-current="page" href="#">ABOUT US</a>
                         </li>
-                        <li class="ms-3 me-3 nav-item">
-                            <a class="nav-link" href="#">MENU</a>
+                        <li class="ms-3 me-3 ">
+                            <a class="" href="#">MENU</a>
                         </li>
-                        <li class="ms-3 me-3 nav-item">
-                            <a class="nav-link" href="#">BLOGS</a>
+                        <li class="ms-3 me-3 ">
+                            <a class="" href="#">BLOGS</a>
                         </li>
-                        <li class="ms-3 me-3 nav-item">
-                            <a class="nav-link" href="#">TESTIMONY</a>
+                        <li class="ms-3 me-3">
+                            <a class="" href="#">TESTIMONY</a>
                         </li>
-                        <li class="ms-3 me-3 nav-item">
-                            <a class="nav-link" href="#">FIND US</a>
+                        <li class="ms-3 me-3 ">
+                            <a class="" href="#">FIND US</a>
                         </li>
-                        <li class="ms-3 me-3 nav-item">
-                            <a class="nav-link" href="#">OUR TEAM</a>
+                        <li class="ms-3 me-3 ">
+                            <a class="" href="#">OUR TEAM</a>
                         </li>
 
 
@@ -167,13 +190,12 @@
                 </nav>
             </div>
             <div class="social">
-                <ul class="navbar-nav sm-icons">
-                    <li class="me-2 ms-2 nav-item"><a class="nav-link" href="#"><i class="fab fa-instagram"></i></a>
+                <ul class="">
+                    <li class="me-2 ms-2"><a class="nav-link" href="#"><i class="fab fa-instagram"></i></a>
                     </li>
-                    <li class="me-2 ms-2 nav-item"><a class="nav-link" href="#"><i
-                                class="me-2 ms-2 fab fa-facebook-f"></i></a>
+                    <li class="me-2 ms-2"><a class="" href="#"><i class="me-2 ms-2 fab fa-facebook-f"></i></a>
                     </li>
-                    <li class="me-2 ms-2 nav-item"><a class="nav-link" href="#"><i class="fab fa-whatsapp"></i></a>
+                    <li class="me-2 ms-2"><a class="" href="#"><i class="fab fa-whatsapp"></i></a>
                     </li>
                 </ul>
             </div>
@@ -184,16 +206,16 @@
     <main>
 
         <!-- main hero section / banner -->
-        <div class="col-xxl-8  mt-1 w-100"
-            style="z-index:0; background-image: url(./asset/pizza1\ 1.png) ; background-size: cover; height: 100vh;">
-            <div class="h-100 w-100 position-absolute d-flex "
-                style="background-color: rgba(0, 0, 0, 0.5); z-index: 1; ">
+        <div class="w-100"
+            style="z-index:0; columns: 8; background-image: url(./asset/pizza1\ 1.png) ; background-size: cover; height: 100vh;">
+            <div class="overlay"
+                style="height: 110%; width: 100%; position: absolute; display: flex; flex-wrap: wrap; background-color: rgba(0, 0, 0, 0.5); z-index: 1; ">
                 <div class=" row flex-lg gy-0 gx-0 ms-5 ">
 
                     <div class="col-lg-6 mt-auto mb-auto w-50">
-                        <h1 class="w-100 main-h ms-5 fw-bold mb-3 text-white">Craving for a chessy pizza?</h1>
+                        <h1 class="w-100 main-h ms-5 fw-bold mb-3">Craving for a chessy pizza?</h1>
                         <div class="ms-5" style="width:60%; border:solid 5px #f24c4c; "></div>
-                        <p class="ms-5 text-white w-75">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        <p class="ms-5w-75">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                             Phasellus ac
                             placerat dui. Vestibulum ut felis et lorem porta congue vitae nec turpis. Aliquam quis leo
                             at nunc tempor faucibus et ac massa.</p>
@@ -209,7 +231,7 @@
         <div class="about m-5 align-item-center">
             <div id="heaidng-container" class="d-flex flex-column align-items-center ">
 
-                <h1 class=" text-white mb-0">About Us</h1>
+                <h1 class="mb-0">About Us</h1>
                 <div class=" mt-2 mb-5 w-25" style=" width:20%; border:solid 3px #f24c4c;
 ; "></div>
             </div>
@@ -219,7 +241,7 @@
                     <div class=" ms-5  " style="width:60%; border:solid 3px #f24c4c; "></div>
 
 
-                    <p class="text-white ps-5 pe-3 me-5 mt-2">
+                    <p class="  ps-5 pe-3 me-5 mt-2">
 
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                         Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
@@ -242,7 +264,7 @@
 
         <!-- menu section start-->
         <div class=" p-3 m-5 align-item-center">
-            <div id="heaidng-container" class="  text-white d-flex flex-column align-items-center ">
+            <div id="heaidng-container" class=" d-flex flex-column align-items-center ">
 
                 <h1 class=" mb-0">Menu</h1>
                 <div class=" mt-2 mb-5 w-25" style=" width:20%; border:solid 3px #f24c4c;
@@ -253,7 +275,7 @@
                     savour the best pizza in town. </p>
             </div>
 
-            <div class="text-white m-2 row ms-auto me-auto" style="width: 90% !important;">
+            <div class="  m-2 row ms-auto me-auto" style="width: 90% !important;">
 
                 <!-- 2x col x 3 row  -->
                 <div class="col-lg-6 ">
@@ -360,7 +382,7 @@
         <div class="about m-5 align-item-center">
             <div id="heaidng-container" class="d-flex flex-column align-items-center ">
 
-                <h1 class=" text-white mb-0">Carousel</h1>
+                <h1 class="mb-0">Carousel</h1>
                 <div class=" mt-2 mb-5 w-25" style=" width:20%; border:solid 3px #f24c4c;
 ; "></div>
             </div>
@@ -416,7 +438,7 @@
             <div class="mt-5 about m-5 align-item-center">
                 <div id="heaidng-container" class="d-flex flex-column align-items-center ">
 
-                    <h1 class="mt-5 text-white mb-0">Gallery</h1>
+                    <h1 class="mt-5mb-0">Gallery</h1>
                     <div class=" mt-2 mb-5 w-50" style=" width:20%; border:solid 3px #f24c4c;
 ; "></div>
                 </div>
@@ -445,12 +467,12 @@
             <div class="about m-5 align-item-center">
                 <div id="heaidng-container" class="d-flex flex-column align-items-center ">
 
-                    <h1 class=" text-white mb-0">Find us</h1>
+                    <h1 class="mb-0">Find us</h1>
                     <div class=" mt-2 mb-5 w-25" style=" width:20%; border:solid 3px #f24c4c;
 ; "></div>
                 </div>
 
-                <div class="text-white row">
+                <div class="  row">
                     <div class="col-lg-6  p-5">
 
 
@@ -485,7 +507,7 @@
 
 
     <!-- footer section start-->
-    <footer class="text-white p-5">
+    <footer class="  p-5">
         <div class="row">
             <div class="col-lg-8">
                 <img src="./asset/Group.png">
